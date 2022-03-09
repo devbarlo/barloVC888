@@ -119,7 +119,7 @@ async def skip(client, m: Message):
             await m.reply(OP)
 
 
-@app.on_message(command(["vstop", "ايقاف", "end"]) & filters.group)
+@app.on_message(command(["vstop", "ايقاف فيديو", "end"]) & filters.group)
 @authorized_users_only
 async def stop(client, m: Message):
     chat_id = m.chat.id
@@ -131,7 +131,7 @@ async def stop(client, m: Message):
         except Exception as e:
             await m.reply(f"**Error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ليس في الدفق الأن**")
+        await m.reply("❌ **لآ يوجد فيديوهات مشغله أصلا ...**")
 
 
 @app.on_message(command(["vpause"]) & filters.group)
@@ -147,7 +147,7 @@ async def pause(client, m: Message):
         except Exception as e:
             await m.reply(f"**Error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ليس في الدفق الأن**")
+        await m.reply("❌ **لآ يوجد فيديوهات مشغله أصلا ...**")
 
 
 @app.on_message(command(["vresume"]) & filters.group)
@@ -163,7 +163,7 @@ async def resume(client, m: Message):
         except Exception as e:
             await m.reply(f"**Error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ليس في الدفق الأن**")
+        await m.reply("❌ **لآ يوجد فيديوهات مشغله أصلا ...**")
 
 
 @app.on_message(command(["vmute"]) & filters.group)
@@ -179,7 +179,7 @@ async def mute(client, m: Message):
         except Exception as e:
             await m.reply(f"**Error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ليس في الدفق الأن**")
+        await m.reply("❌ **لآ يوجد فيديوهات مشغله أصلا ...**")
 
 
 @app.on_message(command(["vunmute"]) & filters.group)
@@ -195,7 +195,7 @@ async def unmute(client, m: Message):
         except Exception as e:
             await m.reply(f"**Error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ليس في الدفق الأن**")
+        await m.reply("❌ **لآ يوجد فيديوهات مشغله أصلا ...**")
 
 
 @Client.on_callback_query(filters.regex("cbpause"))
@@ -334,4 +334,4 @@ async def change_volume(client, m: Message):
         except Exception as e:
             await m.reply(f"**Error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ليس في الدفق الأن**")
+        await m.reply("❌ **لآ يوجد فيديوهات مشغله أصلا ...**")
