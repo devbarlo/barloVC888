@@ -10,7 +10,7 @@ from Music.MusicUtilities.database.changers import (alpha_to_int, int_to_alpha,
                                       time_to_seconds)
 
 
-@app.on_message(command(["addrotba", "رفع رتبه"]) & filters.group)
+@app.on_message(filters.command(["addrotba", "رفع رتبه"]) & filters.group)
 @AdminActual
 async def auth(_, message: Message):
     if not message.reply_to_message:
@@ -79,7 +79,7 @@ async def auth(_, message: Message):
         await message.reply_text(f"بالفعل في قائمة المستخدمين المعتمدين.")
 
 
-@app.on_message(command(["delrotba", "تنزيل رتبه"]) & filters.group)
+@app.on_message(filters.command(["delrotba", "تنزيل رتبه"]) & filters.group)
 @AdminActual
 async def whitelist_chat_func(_, message: Message):
     if not message.reply_to_message:
