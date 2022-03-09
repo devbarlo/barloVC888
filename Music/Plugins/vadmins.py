@@ -134,7 +134,7 @@ async def stop(client, m: Message):
         await m.reply("❌ **لآ يوجد فيديوهات مشغله أصلا ...**")
 
 
-@app.on_message(command(["vpause"]) & filters.group)
+@app.on_message(command(["vpause", "وقف فيديو مؤقت"]) & filters.group)
 @authorized_users_only
 async def pause(client, m: Message):
     chat_id = m.chat.id
@@ -150,7 +150,7 @@ async def pause(client, m: Message):
         await m.reply("❌ **لآ يوجد فيديوهات مشغله أصلا ...**")
 
 
-@app.on_message(command(["vresume"]) & filters.group)
+@app.on_message(command(["vresume", "استمرار الفيديو"]) & filters.group)
 @authorized_users_only
 async def resume(client, m: Message):
     chat_id = m.chat.id
@@ -166,7 +166,7 @@ async def resume(client, m: Message):
         await m.reply("❌ **لآ يوجد فيديوهات مشغله أصلا ...**")
 
 
-@app.on_message(command(["vmute"]) & filters.group)
+@app.on_message(command(["vmute", "كتم الفيديو"]) & filters.group)
 @authorized_users_only
 async def mute(client, m: Message):
     chat_id = m.chat.id
@@ -174,7 +174,7 @@ async def mute(client, m: Message):
         try:
             await call_py.mute_stream(chat_id)
             await m.reply(
-                "🔇 **Assistant dibisukan.**\n\n• **Untuk mengaktifkan suara Assistant, gunakan Perintah**\n» /vunmute"
+                "🔇 **تم كتم المساعد الأن.**\n\n• **لتنشيط صوت المساعد ، استخدم هذا الأمر 👇**\n» الغاء كتم الفيديو"
             )
         except Exception as e:
             await m.reply(f"**Error:**\n\n`{e}`")
@@ -182,7 +182,7 @@ async def mute(client, m: Message):
         await m.reply("❌ **لآ يوجد فيديوهات مشغله أصلا ...**")
 
 
-@app.on_message(command(["vunmute"]) & filters.group)
+@app.on_message(command(["vunmute", "الغاء كتم الفيديو"]) & filters.group)
 @authorized_users_only
 async def unmute(client, m: Message):
     chat_id = m.chat.id
@@ -190,7 +190,7 @@ async def unmute(client, m: Message):
         try:
             await call_py.unmute_stream(chat_id)
             await m.reply(
-                "🔊 **Assistant diaktifkan.**\n\n• **Untuk menonaktifkan bot pengguna, gunakan Perintah**\n» /vmute"
+                "🔊 **تم تنشيط المساعد الأن.**\n\n• **لكتم المساعد مره أخري أستخدم هذا الأمر 👇**\n» كتم الفيديو"
             )
         except Exception as e:
             await m.reply(f"**Error:**\n\n`{e}`")
