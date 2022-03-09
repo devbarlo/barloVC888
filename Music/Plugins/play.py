@@ -199,7 +199,7 @@ async def play(_, message: Message):
                 f"""
 {ASSNAME}(@{ASSUSERNAME}) محظور في الدردشة الخاصة بك **{chat_title}**
 
-قم بي الغاء الحظر للاستخدام البوت بي نجاح❤️
+قم بي الغاء الحظر للاستخدام البوت بي نجاح🎶️
 """
             )
             return
@@ -208,7 +208,7 @@ async def play(_, message: Message):
             try:
                 await ASS_ACC.join_chat(f"{message.chat.username}")
                 await message.reply(
-                    f"{ASSNAME} تم انضمام المساعد بناج💕 ،،",
+                    f"{ASSNAME} تم انضمام المساعد بناج🎧 ،،",
                 )
                 await remove_active_chat(chat_id)
             except Exception as e:
@@ -249,7 +249,7 @@ async def play(_, message: Message):
         what = "Audio Searched"
         await LOG_CHAT(message, what)
         mystic = await message.reply_text(
-            f"*جـاري معالجه الصوت انتظر❤️ {username}**"
+            f"*جـاري معالجه الصوت انتظر🎶️ {username}**"
         )
         if audio.file_size > 157286400:
             await mystic.edit_text("Ukuran File Audio Harus Kurang dari 150 mb")
@@ -280,7 +280,7 @@ async def play(_, message: Message):
             else file_name,
         )
         title = "Audio Yang Dipilih Dari Telegram"
-        link = "https://t.me/SE_MO_2"
+        link = "https://t.me/bar_lo0o"
         thumb = "cache/Audio.png"
         videoid = "smex1"
     elif url:
@@ -401,7 +401,7 @@ async def play(_, message: Message):
 <b>لم يتم العثور علي اسم الاغنية قم بكتابه الاسم الصحيحه
 
 وقم بكتابه جنمبي امر
-`/play 💕`
+`/play 🎧`
 """,
             )
             return
@@ -434,7 +434,7 @@ async def play(_, message: Message):
         thumb ="cache/IMG_20211105_143948_192.jpg"
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await mystic.edit( 
-            f"**الـرجـاء اخـتـيـار الـمـوسـيـقـي الـمـطـلـوبة مـن الاسفل • 🎶👇 **\n\n¹ <b>{title1[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__\n\n² <b>{title2[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__\n\n³ <b>{title3[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__",    
+            f"**الـرجـاء اخـتـيـار الـمـوسـيـقـي الـمـطـلـوبة مـن الاسفل • 🎶👇 **\n\n¹ <b>{title1[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__\n\n² <b>{title2[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__\n\n³ <b>{title3[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -469,10 +469,10 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo=thumb,
             caption=f"""
-<b>🚨 Trek ditambahkan ke antrian</b>
+<b>🎧 Trek ditambahkan ke antrian</b>
 
-<b>🏷️ Nama Kontol: [{title[:25]}]({link})</b>
-<b>⏱️ Durasi Kontol:</b> {duration} \n
+<b>🖋️ Nama Kontol: [{title[:25]}]({link})</b>
+<b>🕓 Durasi Kontol:</b> {duration} \n
 <b>🎧 Atas permintaan Si kontol: </b>{checking}
 
 <b>#️⃣ Posisi antrian Kontol</b> {position}
@@ -510,8 +510,8 @@ async def play(_, message: Message):
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),
             caption=f"""
-<b>🏷 اسم الاغنيه:</b> [{title[:25]}]({link})
-<b>⏱️ المدة:</b> {duration}
+<b>🖋 اسم الاغنيه:</b> [{title[:25]}]({link})
+<b>🕓 المدة:</b> {duration}
 <b>🎧 مطلوبه من:</b> {checking}
 """,
         )
@@ -660,11 +660,11 @@ async def startyuplay(_, CallbackQuery):
         m = await CallbackQuery.message.reply_photo(
             photo=thumb,
             caption=f"""
-<b>🚨 تمت إضافة المسارات إلى قائمة الانتظار</b>
+<b>🎧 تمت إضافة المسارات إلى قائمة الانتظار</b>
 
-<b>🏷 الاسم Kontol:</b>[{title[:25]}]({url})
-<b>⏱️ المده Kontol:</b> {duration}
-<b>🚨</b> [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
+<b>🖋 الاسم Kontol:</b>[{title[:25]}]({url})
+<b>🕓 المده Kontol:</b> {duration}
+<b>🎧</b> [My Bot](https://t.me/{BOT_USERNAME}?start=info_{id})
 <b>🎧 مطلوبه من:</b> {checking}
 
 <b>#️⃣ الاغنيه في قائمة رقم</b> {position}
@@ -691,10 +691,10 @@ async def startyuplay(_, CallbackQuery):
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),
             caption=f"""
-<b>🏷 الاسم:</b> [{title[:25]}]({url})
-<b>⏱️ المدة:</b> {duration}
-<b>🚨</b> [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
-<b>🎧 مطلوبة من:</b> {checking}
+<b>🖋 الاسم:</b> [{title[:25]}]({url})
+<b>🕓 المدة:</b> {duration}
+<b>🎧 الدخول إلي البوت:</b> [My Bot](https://t.me/{BOT_USERNAME}?start=info_{id})
+<b>💁‍♂️ مطلوبة من:</b> {checking}
 """,
         )
         os.remove(thumb)
@@ -753,7 +753,7 @@ async def popat(_,CallbackQuery):
     if i == 1:
         buttons = search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10 ,user_id, query)
         await CallbackQuery.edit_message_text(
-            f"**الـرجـاء اخـتـيـار الاغـنـيـة الـمـطـلوبه مـن الاسـفـل **\n\n⁶ <b>{title6[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__\n\n₇ <b>{title7[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__\n\n⁸ <b>{title8[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__\n\n⁹ <b>{title9[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__\n\n¹⁰ <b>{title10[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__",    
+            f"**الـرجـاء اخـتـيـار الاغـنـيـة الـمـطـلوبه مـن الاسـفـل **\n\n⁶ <b>{title6[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__\n\n₇ <b>{title7[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__\n\n⁸ <b>{title8[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__\n\n⁹ <b>{title9[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__\n\n¹⁰ <b>{title10[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -761,7 +761,7 @@ async def popat(_,CallbackQuery):
     if i == 2:
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await CallbackQuery.edit_message_text(
-            f"**الـرجـاء اخـتـيـار الاغـنـة الـمـطـلوبة مـن الاسـفل**\n\n¹ <b>{title1[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__\n\n² <b>{title2[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__\n\n³ <b>{title3[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 🚨 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ 💁‍♂️ __Powered by {BOT_NAME}__",    
+            f"**الـرجـاء اخـتـيـار الاغـنـة الـمـطـلوبة مـن الاسـفل**\n\n¹ <b>{title1[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__\n\n² <b>{title2[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__\n\n³ <b>{title3[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 🎧 <u>__[My Bot](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ 🎥 __Powered by {BOT_NAME}__",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True 
         )  
@@ -777,7 +777,7 @@ async def play_playlist_cmd(_, message):
     buttons = playlist_markup(user_name, user_id)
     await message.reply_photo(
     photo=thumb, 
-    caption=("**__اهلا بك في ميزه قائمة التشغيل__**\n\nحدد قائمة التشغيل التي تريد تشغيلها💕 ،،"),    
+    caption=("**__اهلا بك في ميزه قائمة التشغيل__**\n\nحدد قائمة التشغيل التي تريد تشغيلها🎧 ،،"),    
     reply_markup=InlineKeyboardMarkup(buttons),
     )
     return
