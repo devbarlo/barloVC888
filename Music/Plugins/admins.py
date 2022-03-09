@@ -101,7 +101,7 @@ async def stop_cmd(_, message):
         pass   
     await message.reply_text("Menghapus Databae, Antrian, Log, File Mentah, Unduhan.")
     
-@app.on_message(filters.command(["pause", "ايقاف مۊقت" f"pause@{BOT_USERNAME}", "ps"]))
+@app.on_message(command(["pause", "وقف"]) & filters.group)
 async def pause_cmd(_, message): 
     if message.sender_chat:
         return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
@@ -119,7 +119,7 @@ async def pause_cmd(_, message):
     await music.pytgcalls.pause_stream(chat_id)
     await message.reply_text(f"🎧 تم ايقاف الاغنيه موقتا يا {checking}!")
     
-@app.on_message(filters.command(["resume", "استمرار" f"resume@{BOT_USERNAME}", "rs"]))
+@app.on_message(command(["resume", "استمرار"]) & filters.group)
 async def stop_cmd(_, message): 
     if message.sender_chat:
         return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 

@@ -69,8 +69,8 @@ async def vplay(c: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("جـــروب الــداعم : 💕 ", url=f"https://t.me/{GROUP}"),
-                InlineKeyboardButton("قـنـاة الـسـورس : 💕 ", url=f"https://t.me/{CHANNEL}"),
+                InlineKeyboardButton("جروب الدعم - 🧤 ", url=f"https://t.me/{GROUP}"),
+                InlineKeyboardButton("قناة السورس - 🚨 ", url=f"https://t.me/{CHANNEL}"),
             ]
         ]
     )
@@ -245,7 +245,7 @@ async def vplay(c: Client, message: Message):
         else:
             what = "Query Given"
             await LOG_CHAT(message, what)
-            loser = await message.reply("🔎 **جاري البحث انتظر 💕 **")
+            loser = await message.reply("🔎 **انتظر جاري البحث... 🎥 **")
             query = message.text.split(None, 1)[1]
             search = ytsearch(query)
             Q = 480
