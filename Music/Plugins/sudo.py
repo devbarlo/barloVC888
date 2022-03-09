@@ -6,7 +6,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 
-@app.on_message(filters.command("addsudo") & filters.user(OWNER))
+@app.on_message(command(["addsudo", "رفع مطور"]) & filters.group)
 async def useradd(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
@@ -25,7 +25,7 @@ async def useradd(_, message: Message):
         added = await add_sudo(user.id)
         if added:
             await message.reply_text(
-                f"Ditambahkan **{user.mention}** Sebagai Pengguna sudo"
+                f"تم رفعه **{user.mention}** مطور داخل بوت الموسيقي . 👮‍♂️ "
             )
             return os.execvp("python3", ["python3", "-m", "Music"])
         await edit_or_reply(message, text="Terjadi kesalahan, periksa log.")
@@ -38,13 +38,13 @@ async def useradd(_, message: Message):
         return await message.reply_text("Sudah menjadi Pengguna Sudo.")
     added = await add_sudo(user_id)
     if added:
-        await message.reply_text(f"Ditambahkan **{mention}** Sebagai Pengguna Sudo")
+        await message.reply_text(f"تم رفعه **{mention}** مطور داخل بوت الموسيقي . 👮‍♂️ ")
         return os.execvp("python3", ["python3", "-m", "Music"])
     await edit_or_reply(message, text="Terjadi kesalahan, periksa log.")
     return
 
 
-@app.on_message(filters.command("delsudo") & filters.user(OWNER))
+@app.on_message(command(["delsudo", "تنزيل مطور"]) & filters.group)
 async def userdel(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
@@ -61,7 +61,7 @@ async def userdel(_, message: Message):
             return await message.reply_text(f"Not a part of Music's Sudo.")
         removed = await remove_sudo(user.id)
         if removed:
-            await message.reply_text(f"Menghapus **{user.mention}** dari Sudo.")
+            await message.reply_text(f"تم تنزيله **{user.mention}** من المطورين داخل بوت الموسيقي . 👮‍♂️")
             return os.execvp("python3", ["python3", "-m", "Music"])
         await message.reply_text(f"Sesuatu yang salah terjadi.")
         return
@@ -72,7 +72,7 @@ async def userdel(_, message: Message):
         return await message.reply_text(f"Bukan bagian dari Sudo Musik.")
     removed = await remove_sudo(user_id)
     if removed:
-        await message.reply_text(f"Menghapus **{mention}** dari Sudo.")
+        await message.reply_text(f"تم تنزيله **{mention}** من المطورين داخل بوت الموسيقي . 👮‍♂️")
         return os.execvp("python3", ["python3", "-m", "Music"])
     await message.reply_text(f"Something wrong happened.")
 
