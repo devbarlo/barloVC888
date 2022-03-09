@@ -6,7 +6,7 @@ from Music.MusicUtilities.database.chats import (get_served_chats, is_served_cha
 from ..MusicUtilities.helpers.filters import command
 
 
-@app.on_message(filters.command("broadcast_pin") & filters.user(OWNER))
+@app.on_message(command(["broadcast_b", "  "]) & filters.group)
 async def broadcast_message_pin(_, message):
     if not message.reply_to_message:
         pass
@@ -58,7 +58,7 @@ async def broadcast_message_pin(_, message):
     await message.reply_text(f"✅ **Pesan yang disiarkan di {sent} obrolan\n📌 dengan {pin} pin.**")
 
 
-@app.on_message(filters.command("broadcast") & filters.user(OWNER))
+@app.on_message(command(["broadcast", " "]) & filters.group)
 async def broadcast_message_nopin(_, message):
     if not message.reply_to_message:
         pass
