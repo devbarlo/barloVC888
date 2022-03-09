@@ -130,9 +130,9 @@ async def stop_cmd(_, message):
     checking = message.from_user.mention
     chat_id = message.chat.id
     if not await is_active_chat(chat_id):
-        return await message.reply_text("Saya tidak berpikir jika ada sesuatu yang diputar di obrolan suara")
+        return await message.reply_text("**لا أعتقد ما إذا كان هناك شيء ما يتم تشغيله في الدردشة الصوتية**")
     elif await is_music_playing(chat_id):
-        return await message.reply_text("Saya tidak berpikir jika ada sesuatu yang diputar di obrolan suara") 
+        return await message.reply_text("**لا أعتقد ما إذا كان هناك شيء ما يتم تشغيله في الدردشة الصوتية**") 
     else:
         await music_on(chat_id)
         await music.pytgcalls.resume_stream(chat_id)
