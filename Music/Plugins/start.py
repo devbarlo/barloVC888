@@ -65,7 +65,7 @@ pstart_markup = InlineKeyboardMarkup(
             InlineKeyboardButton("قـنـاة السورس :💁‍♂️", url=f"https://t.me/bar_lo0o0o"),
         ],
         [
-            InlineKeyboardButton("🎧 : كيفيه الأستخدام : 🎧", url="https://t.me/bar_lo0o0o/5626"),
+            InlineKeyboardButton("🚨 :  الأوامر  : 🚨", url="https://t.me/BARL0o0_HELP_SOURCE/2"),
         ],
         [
             InlineKeyboardButton("👮‍♂️- مبرمج السورس -👮‍♂️", url="https://t.me/bar_lo0o0"),
