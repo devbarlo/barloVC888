@@ -119,7 +119,7 @@ async def skip(client, m: Message):
             await m.reply(OP)
 
 
-@app.on_message(command(["vstop", "ايقاف فيديو", "end"]) & filters.group)
+@app.on_message(command(["vend", "ايقاف فيديو", "vstop"]) & filters.group)
 @authorized_users_only
 async def stop(client, m: Message):
     chat_id = m.chat.id
