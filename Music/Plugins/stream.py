@@ -245,7 +245,7 @@ async def vplay(c: Client, message: Message):
         else:
             what = "Query Given"
             await LOG_CHAT(message, what)
-            loser = await message.reply("🔎 **انتظر جاري البحث... 🎥 **")
+            loser = await message.reply("🔎 **انتظر جاري البحث عن الفيديو... 🎥 **")
             query = message.text.split(None, 1)[1]
             search = ytsearch(query)
             Q = 480
