@@ -16,11 +16,11 @@ from Music.MusicUtilities.tgcallsrun.video import skip_current_song, skip_item
 
 
 bttn = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("ᴋᴇᴍʙᴀʟɪ", callback_data="cbmenu")]]
+    [[InlineKeyboardButton("↩ - رجوع - ↪", callback_data="cbmenu")]]
 )
 
 
-bcl = InlineKeyboardMarkup([[InlineKeyboardButton("ᴛᴜᴛᴜᴘ", callback_data="cls")]])
+bcl = InlineKeyboardMarkup([[InlineKeyboardButton("❌ -اخفاء - ❌", callback_data="cls")]])
 
 
 @Client.on_callback_query(filters.regex("cbmenu"))
@@ -36,19 +36,19 @@ async def cbmenu(_, query: CallbackQuery):
             show_alert=True,
         )
     await query.edit_message_text(
-        f"⚙️ **Pengaturan dari** {query.message.chat.title}\n\nII : Jeda Streaming\n▷ : Lanjutkan Streaming\n🔇 : Bisukan Assistant\n🔊 : Bunyikan Assistant\n▢ : Hentikan Streaming",
+        f"🌝 **أسم المجموعه** {query.message.chat.title}\n\nII : إيقاف مؤقت\n▷ : أستمرار المقطع\n🔇 : كتم صوت المقطع\n🔊 : تنشيط صوت المقطع\n▢ : لإنهاء البث المباشر",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("▢", callback_data="cbstop"),
-                    InlineKeyboardButton("II", callback_data="cbpause"),
-                    InlineKeyboardButton("▷", callback_data="cbresume"),
+                    InlineKeyboardButton("⏹", callback_data="cbstop"),
+                    InlineKeyboardButton("⏸", callback_data="cbpause"),
+                    InlineKeyboardButton("▶️", callback_data="cbresume"),
                 ],
                 [
                     InlineKeyboardButton("🔇", callback_data="cbmute"),
                     InlineKeyboardButton("🔊", callback_data="cbunmute"),
                 ],
-                [InlineKeyboardButton("ᴛᴜᴛᴜᴘ", callback_data="cls")],
+                [InlineKeyboardButton("❌ -اخفاء - ❌", callback_data="cls")],
             ]
         ),
     )
@@ -65,14 +65,14 @@ async def close(_, query: CallbackQuery):
     await query.message.delete()
 
 
-@app.on_message(command(["vskip", "skip", "تخطي"]) & filters.group)
+@app.on_message(command(["vskip", "skip", "تفاوت"]) & filters.group)
 @authorized_users_only
 async def skip(client, m: Message):
 
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="للتحكم", callback_data="cbmenu"),
+                InlineKeyboardButton(text="تحكم╎🎥", callback_data="cbmenu"),
             ]
         ]
     )
@@ -95,8 +95,8 @@ async def skip(client, m: Message):
                 f"""
 ⏭️ **Memutar {op[2]} selanjutnya**
 
-🏷 **Nama:** [{op[0]}]({op[1]})
-🎧 **Atas permintaan:** {m.from_user.mention()}
+🎥 **أسم المقطع:** [{op[0]}]({op[1]})
+🎧 **أسم المتخطي:** {m.from_user.mention()}
 """,
                 disable_web_page_preview=True,
                 reply_markup=keyboard,
@@ -119,7 +119,7 @@ async def skip(client, m: Message):
             await m.reply(OP)
 
 
-@app.on_message(command(["vend", "قفل", "vstop"]) & filters.group)
+@app.on_message(command(["vend", "غلق", "vstop"]) & filters.group)
 @authorized_users_only
 async def stop(client, m: Message):
     chat_id = m.chat.id
@@ -214,7 +214,7 @@ async def cbpause(_, query: CallbackQuery):
     if chat_id in QUEUE:
         try:
             await call_py.pause_stream(chat_id)
-            await query.edit_message_text("II Streaming telah dijeda", reply_markup=bttn)
+            await query.edit_message_text("تم إيقاف الفيديو مؤقتآ .", reply_markup=bttn)
         except Exception as e:
             await query.edit_message_text(f"**Error:**\n\n`{e}`", reply_markup=bcl)
     else:
@@ -238,7 +238,7 @@ async def cbresume(_, query: CallbackQuery):
         try:
             await call_py.resume_stream(chat_id)
             await query.edit_message_text(
-                "▷ Streaming telah dilanjutkan", reply_markup=bttn
+                "▷ تم استئناف المقطع . ✅", reply_markup=bttn
             )
         except Exception as e:
             await query.edit_message_text(f"**Error:**\n\n`{e}`", reply_markup=bcl)
@@ -264,7 +264,7 @@ async def cbstop(_, query: CallbackQuery):
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
             await query.edit_message_text(
-                "✅ **Streaming telah berakhir**", reply_markup=bcl
+                "✅ **تم إنهاء البث المباشر داخل المحادثه الصوتيه . ✅**", reply_markup=bcl
             )
         except Exception as e:
             await query.edit_message_text(f"**Error:**\n\n`{e}`", reply_markup=bcl)
@@ -289,7 +289,7 @@ async def cbmute(_, query: CallbackQuery):
         try:
             await call_py.mute_stream(chat_id)
             await query.edit_message_text(
-                "🔇 Assistant berhasil dimatikan", reply_markup=bttn
+                "تم كتم صوت المقطع . 🔇", reply_markup=bttn
             )
         except Exception as e:
             await query.edit_message_text(f"***Error:**\n\n`{e}`", reply_markup=bcl)
@@ -314,7 +314,7 @@ async def cbunmute(_, query: CallbackQuery):
         try:
             await call_py.unmute_stream(chat_id)
             await query.edit_message_text(
-                "🔊 Assistant berhasil dibunyikan", reply_markup=bttn
+                "تم أعاده تنشيط صوت المقطع . 🔊", reply_markup=bttn
             )
         except Exception as e:
             await query.edit_message_text(f"**Error:**\n\n`{e}`", reply_markup=bcl)

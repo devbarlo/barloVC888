@@ -305,10 +305,10 @@ async def stop_cmd(_, message):
                 )
                 return
 
-@app.on_message(filters.command(["reload", "تحديث" f"reload@{BOT_USERNAME}"]))
+@app.on_message(command(["reload", "تحديث"]) & filters.group)
 async def reload(_, message):
     chat_id = message.chat.id
     await _.send_message(
     chat_id,
-    "✅ تمت إعادة تشغيل البوت **بنجاح**\n\n✅ **تم** تحديث قائمة المسۊولين **🎶 **"
+    "✅ تمت إعادة تشغيل البوت **بنجاح**\n\n✅ **تم** تحديث قائمة المسؤلين **🎶 **"
 )

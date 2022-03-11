@@ -41,7 +41,7 @@ async def mpthree(_, message: Message):
     url = get_url(message)
     if url:
         query = message.text.split(None, 1)[1]
-        mystic = await message.reply_text("جاري العالحة")
+        mystic = await message.reply_text("جاري المعالجة")
         ydl_opts = {"format": "bestaudio/best"}
         try:
             results = VideosSearch(query, limit=1)
@@ -69,8 +69,8 @@ async def mpthree(_, message: Message):
         m = await message.reply_text(
             f"""
 <b>🏷️ الايم:</b> [{title[:25]}]({url})
-<b>💡</b> [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
-<b>⚡ تم العثور بوسطة</b> [{BOT_NAME}](t.me/{BOT_USERNAME})
+<b>📥</b> [Bot Download](https://t.me/{BOT_USERNAME}?start=info_{id})
+<b>🚨 تم العثور بوسطة</b> [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
@@ -124,7 +124,7 @@ async def mpthree(_, message: Message):
             query,
         )
         hmo = await message.reply_text(
-            f"**اخـتـار رقـم لـتـحـمـيل الفديو او الاغنيه المطلوبه💕 **\n\n¹ <b>{title1[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n² <b>{title2[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n³ <b>{title3[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__",    
+            f"**اخـتـار رقـم لـتـحـمـيل الفديو او الاغنيه المطلوبه💕 **\n\n¹ <b>{title1[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__\n\n² <b>{title2[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__\n\n³ <b>{title3[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -183,8 +183,8 @@ async def startyuplay(_, CallbackQuery):
         reply_markup=InlineKeyboardMarkup(buttons),
         caption=f"""
 <b>🏷️ الاسم:</b> [{title[:25]}]({url})
-├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
-└ ⚡ **تم العثور عليها بوسطة** [{BOT_NAME}](t.me/{BOT_USERNAME})
+├ 📥 [Bot Download](https://t.me/{BOT_USERNAME}?start=info_{id})
+└ 🚨 **تم العثور عليها بوسطة** [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
     )
     os.remove(thumb)
@@ -262,7 +262,7 @@ async def chonga(_, CallbackQuery):
             query,
         )
         await CallbackQuery.edit_message_text(
-            f"**الراجاء اختيار رقم للتحميل الفديو او الاغنيه**\n\n⁶ <b>{title6[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁷ <b>{title7[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁸ <b>{title8[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁹ <b>{title9[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n¹⁰ <b>{title10[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__",    
+            f"**الراجاء اختيار رقم للتحميل الفديو او الاغنيه**\n\n⁶ <b>{title6[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__\n\n⁷ <b>{title7[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__\n\n⁸ <b>{title8[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__\n\n⁹ <b>{title9[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__\n\n¹⁰ <b>{title10[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )
@@ -283,7 +283,7 @@ async def chonga(_, CallbackQuery):
             query,
         )
         await CallbackQuery.edit_message_text(
-            f"**اخيار رقم للتحميل الفديو او الاغنيه المطلوبه**\n\n¹ <b>{title1[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n² <b>{title2[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n³ <b>{title3[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__",    
+            f"**اخيار رقم للتحميل الفديو او الاغنيه المطلوبه**\n\n¹ <b>{title1[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__\n\n² <b>{title2[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__\n\n³ <b>{title3[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 📥 <u>__[Bot Download](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ 🚨 __Powered by {BOT_NAME}__",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True 
         )  
@@ -387,12 +387,12 @@ def gets(videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="لتحميل اغنيهة💕", callback_data=f"gets audio|{videoid}|{user_id}"
+                text="تحميل MP3 - 🎶", callback_data=f"gets audio|{videoid}|{user_id}"
             ),
             InlineKeyboardButton(
-                text="لتحميل فديو💕", callback_data=f"gets video|{videoid}|{user_id}"
+                text="تحميل MP4 - 📽", callback_data=f"gets video|{videoid}|{user_id}"
             ),
         ],
-        [InlineKeyboardButton(text="الغاء💕", callback_data=f"close2")],
+        [InlineKeyboardButton(text="❌╎أخفاء╎❌", callback_data=f"close2")],
     ]
     return buttons
