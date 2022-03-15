@@ -208,7 +208,7 @@ async def play(_, message: Message):
             try:
                 await ASS_ACC.join_chat(f"{message.chat.username}")
                 await message.reply(
-                    f"{ASSNAME} تم انضمام المساعد بناج🎧 ،،",
+                    f"{ASSNAME} تم أنضمام الحساب المسأعد بنجآح ي كابتن 🎧 ،،",
                 )
                 await remove_active_chat(chat_id)
             except Exception as e:
