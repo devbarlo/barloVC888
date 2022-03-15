@@ -226,7 +226,7 @@ async def play(_, message: Message):
                     kontol = (invite_link.replace("+", "")).split("t.me/")[1]
                     link_bokep = f"https://t.me/joinchat/{kontol}"
                 await ASS_ACC.join_chat(link_bokep)
-                await message.reply(f"{ASSNAME} Berhasil Bergabung",)
+                await message.reply(f"{ASSNAME} تم أنضمام المساعد بنجآح ي كابتن . ✅",)
                 await remove_active_chat(chat_id)
             except UserAlreadyParticipant:
                 pass
@@ -398,17 +398,18 @@ async def play(_, message: Message):
             message.from_user.first_name
             hmo = await message.reply_text(
                 """
-<b>لم يتم العثور علي اسم الاغنية قم بكتابه الاسم الصحيحه
+<b>**يجب أن يكون بجانب الأمر أسم أو لينك المحتوي**
 
-وقم بكتابه جنمبي امر
-`/play 🎧`
+** 👇 • مثال كالأتي • 👇**
+
+`**تشغيل او شغل او بارلو + أسم المقطع الصوتي** 🎧`
 """,
             )
             return
         what = "Query Given"
         await LOG_CHAT(message, what)
         query = message.text.split(None, 1)[1]
-        mystic = await message.reply_text("**جاري العثور علي الاغنيه انتظر**")
+        mystic = await message.reply_text("****أنتظر جآري البحث عن المقطع الصوتي... 🔍****")
         try:
             a = VideosSearch(query, limit=5)
             result = (a.result()).get("result")

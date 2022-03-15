@@ -38,11 +38,11 @@ from pyrogram.types import (
 def start_pannel():
     buttons = [
         [
-            InlineKeyboardButton(text="جـروب الـدعـم :🧤​", url=f"https://t.me/bar_lo0o"),
-            InlineKeyboardButton(text="قـنـاة السورس╎💁‍♂️", url=f"https://t.me/bar_lo0o0o"),
+            InlineKeyboardButton(text="جـروب الـدعـم╎🧤​", url=f"https://t.me/bar_lo0o"),
+            InlineKeyboardButton(text="قـنـاة السورس╎💡", url=f"https://t.me/bar_lo0o0o"),
         ],
         [
-            InlineKeyboardButton("الاوامـــر مـن هـنـا :💁‍♂️", url="https://t.me/BARL0o0_HELP_SOURCE/2"),
+            InlineKeyboardButton("🚨╎الاوامـــر╎💁‍♂️", url="https://t.me/BARL0o0_HELP_SOURCE/2"),
         ],
         [
             InlineKeyboardButton("👮‍♂️╎مطور السورس╎👮‍♂️", url="https://t.me/bar_lo0o0"),
@@ -119,7 +119,8 @@ async def start(_, message: Message):
     out = start_pannel()
     await message.reply_text(
         f"""
-شكرا لأضافتي في {message.chat.title}.
+**شكرا لأضافتي في** {message.chat.title}.
+
 🤖╎**مرحبا عزيزي التحيه إليك ثم بعد انا هنا لأقوم بمساعدتك**
 
 📽╎**الموسيقي والفيديو تعمل بشكل جيد**
@@ -141,7 +142,7 @@ async def play(_, message: Message):
         await app.send_message(
             message.chat.id,
             text=f"""
-**نــورت يا╎{rpk}!
+**نــورت يا╎{rpk}♡
 
 🤖 [{BOT_NAME}](tg://user?id=2129034376) انـا بـوت لـتـشـغـيل الـمـوسـيـقـي والفيديو فـي الـدردشـات الـصـوتـيـه╎🍿,
 
