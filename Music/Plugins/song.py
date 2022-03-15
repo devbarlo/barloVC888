@@ -23,7 +23,7 @@ def time_to_seconds(time):
 
 
 @Client.on_message(
-    command(["song", "تحميل", "تنزيل", f"song@{BOT_USERNAME}", "vsong", f"vsong@{BOT_USERNAME}"])
+    command(["song", "تحميل", "نزل", f"song@{BOT_USERNAME}", "vsong", f"vsong@{BOT_USERNAME}"])
 )
 async def mpthree(_, message: Message):
     chat_id = message.chat.id
