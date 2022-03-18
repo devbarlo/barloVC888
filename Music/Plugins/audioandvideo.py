@@ -346,7 +346,7 @@ async def boom(_,CallbackQuery):
 ⏳**المده** {round(x["duration"] / 60)} Mins
 👀**المشاهدة:** __{x["view_count"]}__
 🎥**اسم القناه:** {x["uploader"]}
-__[D E V : S E M O](https://t.me/S_E_M_O_E_L_K_B_E_R)__ """    
+__[BarLo0o | Programmer](https://t.me/bar_lo0o0)__ """    
     link = (x["webpage_url"])
     channel = (x["channel_url"])
     perf = (x['uploader'])
@@ -442,16 +442,16 @@ __[D E V : S E M O](https://t.me/S_E_M_O_E_L_K_B_E_R)__ """
 def p_mark(link, channel):
     buttons= [
             [
-                InlineKeyboardButton(text="المشاهده علي اليوتيوب مباشر 💕 ", url=f'{link}')
+                InlineKeyboardButton(text="شاهد علي اليوتيوب مباشر - 🎥", url=f'{link}')
             ],
             [ 
-                InlineKeyboardButton(text="اضغط للوصول الي قناة اليوتيوب", url=f'{channel}')
+                InlineKeyboardButton(text="أنقر هنا للذهاب لقناة اليوتيوب - ✅", url=f'{channel}')
             ],
         ]
     return buttons    
     
 async def send_file(CallbackQuery, med, filename, videoid, user_id, link, channel):
-    await CallbackQuery.edit_message_text("جاري تحميل\n\nالفيديو او الاغنية التي قمت بطلبها انتظر 💕 .", reply_markup = upl)
+    await CallbackQuery.edit_message_text("جاري تحميل\n\nالفيديو او الاغنية التي قمت بطلبها انتظر 🎶 .", reply_markup = upl)
     try:
         await app.send_chat_action(chat_id=CallbackQuery.message.chat.id, action="upload_document")
         buttons = p_mark(link, channel)
