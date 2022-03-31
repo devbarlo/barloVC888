@@ -2,7 +2,7 @@ import asyncio
 import yt_dlp
 import psutil
 
-from Music.config import GROUP, CHANNEL
+from Music.config import GROUP, CHANNEL, BOT_IMG
 from Music import (
     ASSID,
     BOT_ID,
@@ -38,18 +38,18 @@ from pyrogram.types import (
 def start_pannel():
     buttons = [
         [
-            InlineKeyboardButton(text="جـروب الـدعـم╎🧤​", url=f"https://t.me/bar_lo0o"),
-            InlineKeyboardButton(text="قـنـاة السورس╎💡", url=f"https://t.me/bar_lo0o0o"),
+            InlineKeyboardButton(text="جـروب الـدعـم╎🧤​", url=f"https://t.me/{GROUP}"),
+            InlineKeyboardButton(text="قـنـاة السورس╎💡", url=f"https://t.me/{CHANNEL}"),
         ],
         [
             InlineKeyboardButton("🚨╎الاوامـــر╎💁‍♂️", url="https://t.me/BARL0o0_HELP_SOURCE/2"),
         ],
         [
-            InlineKeyboardButton("👮‍♂️╎مطور السورس╎👮‍♂️", url="https://t.me/bar_lo0o0"),
+            InlineKeyboardButton("👮‍♂️╎مطور السورس", url="https://t.me/bar_lo0o0"),
         ],
     ]
     return (
-        "🎛 **{BOT_NAME} اهلا انا بوت تشغيل موسيقي في المحدثات الصوتيه للاستماع بي ابموسيقي🍿**",
+        "🎛 **{BOT_NAME} اهلا انا بوت تشغيل موسيقي في المحدثات الصواتية للاستماع بي ابموسيقي🍿**",
         buttons,
     )
 
@@ -57,18 +57,10 @@ def start_pannel():
 pstart_markup = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(
-                "✈ اضـفـنــي الـي مـجـمـوعـتك​ ✈", url=f"https://t.me/M_SMSM_BOT?startgroup=true"),
+            InlineKeyboardButton("🇪🇬 | اللغه العربية", callback_data="rabic"),
         ],
         [
-            InlineKeyboardButton(text="جــروب الـدعـم╎🧤", url=f"https://t.me/bar_lo0o"),
-            InlineKeyboardButton("قـنـاة السورس╎💁‍♂️", url=f"https://t.me/bar_lo0o0o"),
-        ],
-        [
-            InlineKeyboardButton("🚨╎الأوامر╎🚨", url="https://t.me/BARL0o0_HELP_SOURCE/2"),
-        ],
-        [
-            InlineKeyboardButton("👮‍♂️╎مطور السورس╎👮‍♂️", url="https://t.me/bar_lo0o0"),
+           InlineKeyboardButton("🇬🇧 | English", callback_data="nglish"),
         ],
     ]
 )
@@ -82,7 +74,7 @@ async def welcome(_, message: Message):
         try:
             if member.id in OWNER:
                 return await message.reply_text(
-                    f"انــضــم ص الـبـوت [{member.mention}] الـي هذة الـدردشـة🎶."
+                    f"انــضــم ص الـبـوت [{member.mention}] الـي هذة الـدردشـة💕."
                 )
             if member.id in SUDOERS:
                 return await message.reply_text(
@@ -146,11 +138,18 @@ async def play(_, message: Message):
         await app.send_message(
             message.chat.id,
             text=f"""
+**[📣]({BOT_IMG}) مرحبا بك ! جاهز لى استخدامي?
 **نــورت يا╎{rpk}♡
 
 🤖 [{BOT_NAME}](tg://user?id=2129034376) انـا بـوت لـتـشـغـيل الـمـوسـيـقـي والفيديو فـي الـدردشـات الـصـوتـيـه╎🍿,
 
-👮‍♂️╎لـمـعرفـة الـتـشـغـيـل والـتـحـكـم فـي الـبـوت وتـشـغـيـل الـمـوسـيـقـي تـابـع بالأاسـفـل 🎶**
+🤖╎ يمكنك تحويل اللغات من الازرار في الاسفل**
+
+**📣╎Hello ! Ready Use Me?
+
+🔻╎Is A Bot That Can Be Used To Listen To Songs In Voice Chat And Can Play Videos In Voice Chat!
+
+🤖╎And you can select the language from the buttons below**
 
 """,
             parse_mode="markdown",

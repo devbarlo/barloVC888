@@ -16,6 +16,7 @@ import os
 import yt_dlp
 from youtubesearchpython import VideosSearch
 from Music.config import LOG_GROUP_ID
+from Music.config import GROUP, CHANNEL, BOT_IMG
 from Music.MusicUtilities.tgcallsrun import ASS_ACC
 from os import path
 import random
@@ -961,3 +962,142 @@ async def delplcb(_,CallbackQuery):
         for note in _playlist:
             await delete_playlist(CallbackQuery.from_user.id, note)
     await CallbackQuery.message.reply_text("Successfully deleted your whole playlist")
+    
+    
+@Client.on_callback_query(filters.regex("nglish"))
+async def nglish(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""
+**[📣]({BOT_IMG}) Hello! Ready Use Me?
+
+🔖  Is A Bot That Can Be Used To Listen To Songs In Voice Chat And Can Play Videos In Voice Chat!
+
+📑 To Find Out All The Available Command Bots, You Can Press The Two Buttons Below, Namely Cmd Music And Cmd Stream**
+
+""",
+        reply_markup=InlineKeyboardMarkup(
+        [
+        [
+            InlineKeyboardButton(
+                "⚜ • Add Me To Your Group • ⚜", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+        ],
+        [
+            InlineKeyboardButton("🔭╎support group", url=f"https://t.me/{GROUP}"),
+            InlineKeyboardButton("📡╎Source channel", url=f"https://t.me/{CHANNEL}"),
+        ],
+        [
+           InlineKeyboardButton("🏴‍☠️╎programmer", callback_data="sthjbt"),
+        ],
+        [
+           InlineKeyboardButton("🔙╎back", callback_data="xback"),
+        ],
+        ]
+   ),
+ )
+
+@Client.on_callback_query(filters.regex("rabic"))
+async def rabic(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""
+**[📣]({BOT_IMG}) مرحبا بك! جاهز استخدمني?
+
+🔖 انا بوت يمكن استخدامه للاستماع إلى الأغاني في الدردشة الصوتية ويمكن تشغيل مقاطع الفيديو في الدردشة الصوتية!
+
+📑 ولمعرفة جميع اوامر البوت المتاحة، يمكنك الضغط على زر الاوامر ادناه**
+
+""",
+        reply_markup=InlineKeyboardMarkup(
+        [
+        [
+            InlineKeyboardButton(
+                "⚜ • أضف البوت إلي مجموعتك • ⚜", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+        ],
+        [
+            InlineKeyboardButton("جـروب الـدعـم╎🧤​", url=f"https://t.me/{GROUP}"),
+            InlineKeyboardButton("قـنـاة السورس╎💡", url=f"https://t.me/{CHANNEL}"),
+        ],
+        [
+            InlineKeyboardButton("🚨╎الاوامـــر╎💁‍♂️", url="https://t.me/BARL0o0_HELP_SOURCE/2"),
+        ],
+        [
+           InlineKeyboardButton("👮‍♂️╎مطور السورس", callback_data="vhkcbt"),
+        ],
+        [
+           InlineKeyboardButton("🔙╎رجــــــوع", callback_data="xback"),
+        ],
+        ]
+   ),
+ )
+ 
+@Client.on_callback_query(filters.regex("vhkcbt"))
+async def vhkcbt(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""[👌]({BOT_IMG}) هلا ومرحبا بك هنا يمكن لك التواصل مع المبرمج ومن هنا يمكن لك استخراج اشياء التنصيب""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [        
+                    InlineKeyboardButton(
+                        "• ⇡ ᗪEᐯ 🎙 ᗷᗩᖇᒪO ⇡ •", url=f"https://t.me/bar_lo0o0"
+                    ),
+                ],
+                [                  
+                    InlineKeyboardButton(
+                        "🔙 ╎رجــــــوع", callback_data="rabic" 
+                    ),  
+                ],
+            ]
+        ),
+    )         
+    
+    
+@Client.on_callback_query(filters.regex("sthjbt"))
+async def sthjbt(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""[👌]({BOT_IMG}) Hala and welcome here you can communicate with the programmer and from here you can extract the things of the inauguration""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [        
+                    InlineKeyboardButton(
+                        "• ⇡ ᗪEᐯ 🎙 ᗷᗩᖇᒪO ⇡ •", url=f"https://t.me/bar_lo0o0"
+                    ),
+                ],
+                [                  
+                    InlineKeyboardButton(
+                        "🔙╎back", callback_data="nglish" 
+                    ),  
+                ],
+            ]
+        ),
+    )         
+    
+@Client.on_callback_query(filters.regex("xback"))
+async def xback(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""
+**[📣]({BOT_IMG}) مرحبا بك ! جاهز لى استخدامي?
+**نــورت يا╎{rpk}♡
+
+🤖 [{BOT_NAME}](tg://user?id=2129034376) انـا بـوت لـتـشـغـيل الـمـوسـيـقـي والفيديو فـي الـدردشـات الـصـوتـيـه╎🍿,
+
+🤖╎ يمكنك تحويل اللغات من الازرار في الاسفل**
+
+**📣╎Hello ! Ready Use Me?
+
+🔻╎Is A Bot That Can Be Used To Listen To Songs In Voice Chat And Can Play Videos In Voice Chat!
+
+🤖╎And you can select the language from the buttons below**
+
+""",
+        reply_markup=InlineKeyboardMarkup(
+        [
+        [
+            InlineKeyboardButton("🇪🇬 | اللغه العربية", callback_data="rabic"),
+        ],
+        [
+            InlineKeyboardButton("🇬🇧 | English", callback_data="nglish"),
+        ],
+        ]
+   ),
+ )
+ 
+ 
