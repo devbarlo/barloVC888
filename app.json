@@ -2,7 +2,7 @@
     "name": "MusicKyura",
     "description": "Music allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/devbarlo/barloVCsource",
+    "repository": "https://github.com/adhamsamyelshora/SMSMNEWMUSIXSPEED",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -18,6 +18,10 @@
             "description": "fill with telegram id of account",
             "required": true,
             "value": ""
+        },
+         "BOT_IMG": {
+            "description": "صوره استارت",
+            "required": true
         },
         "LOG_GROUP_ID": {
             "description": "create a private group and get the group id, add your bot as admin to the group too",
