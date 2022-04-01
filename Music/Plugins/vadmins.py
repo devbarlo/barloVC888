@@ -65,7 +65,7 @@ async def close(_, query: CallbackQuery):
     await query.message.delete()
 
 
-@app.on_message(command(["vskip", "skip", "تفاوت"]) & filters.group)
+@app.on_message(command(["/vskip", "skip", "تفاوت", f"vskip@{BOT_USERNAME}", "تفاوت"]))
 @authorized_users_only
 async def skip(client, m: Message):
 
@@ -119,7 +119,7 @@ async def skip(client, m: Message):
             await m.reply(OP)
 
 
-@app.on_message(command(["vend", "غلق", "vstop"]) & filters.group)
+@app.on_message(command(["/vend", "غلق", "قفل", f"vend@{BOT_USERNAME}", "غلق"]))
 @authorized_users_only
 async def stop(client, m: Message):
     chat_id = m.chat.id
