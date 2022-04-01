@@ -979,17 +979,17 @@ async def nglish(_, query: CallbackQuery):
         [
         [
             InlineKeyboardButton(
-                "⚔️Add Me To Your Group⚔️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                "⚜Add Me To Your Group⚜", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
         ],
         [
-            InlineKeyboardButton("🔭︙support group", url=f"https://t.me/{GROUP}"),
-            InlineKeyboardButton("📡︙Source channel", url=f"https://t.me/{CHANNEL}"),
+            InlineKeyboardButton("🔭╎support group", url=f"https://t.me/{GROUP}"),
+            InlineKeyboardButton("📡╎Source channel", url=f"https://t.me/{CHANNEL}"),
         ],
         [
-           InlineKeyboardButton("🏴‍☠️︙programmer", callback_data="sthjbt"),
+           InlineKeyboardButton("🏴‍☠️╎programmer", callback_data="sthjbt"),
         ],
         [
-           InlineKeyboardButton("🔙︙back", callback_data="xback"),
+           InlineKeyboardButton("🔙╎back", callback_data="xback"),
         ],
         ]
    ),
@@ -1010,20 +1010,20 @@ async def rabic(_, query: CallbackQuery):
         [
         [
             InlineKeyboardButton(
-                "⚔️اضاف البوت الى مجموعتك⚔️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                "⚜ • أضف البوت الي مجموعتك • ⚜", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
         ],
         [
-            InlineKeyboardButton("🔭︙جروب الدعم", url=f"https://t.me/{GROUP}"),
-            InlineKeyboardButton("📡︙قناه السورس", url=f"https://t.me/{CHANNEL}"),
+            InlineKeyboardButton("🔭╎جروب الدعم", url=f"https://t.me/{GROUP}"),
+            InlineKeyboardButton("📡╎قناه السورس", url=f"https://t.me/{CHANNEL}"),
         ],
         [
-            InlineKeyboardButton("🎟︙الاوامر", url="https://t.me/O_U_C/5291"),
+            InlineKeyboardButton("🎟╎الاوامر", url="https://t.me/BARL0o0_HELP_SOURCE/2"),
         ],
         [
-           InlineKeyboardButton("🏴‍☠️︙المبرمج", callback_data="vhkcbt"),
+           InlineKeyboardButton("🏴‍☠️╎المبرمج", callback_data="vhkcbt"),
         ],
         [
-           InlineKeyboardButton("🔙︙رجــــــوع", callback_data="xback"),
+           InlineKeyboardButton("🔙╎رجــــــوع", callback_data="xback"),
         ],
         ]
    ),
@@ -1037,12 +1037,12 @@ async def vhkcbt(_, query: CallbackQuery):
             [
                 [        
                     InlineKeyboardButton(
-                        "⁨⌯ ٰ𝘿ٌِ𝙀ٓ𝙑 ٰ𝙆ٍ𝙔𝙊ٰ𝙂ٰٓٓ𝘼 ˹🕷️🔥˼⁩", url=f"https://t.me/J_G_A"
+                        "⁨⌯ ٰ𝘿ٌِ𝙀ٓ𝙑 ٰ𝘽𝘼𝙍𝙇𝙊 ˹✈🔥˼⁩", url=f"https://t.me/bar_lo0o0"
                     ),
                 ],
                 [                  
                     InlineKeyboardButton(
-                        "🔙 ︙رجــــــوع", callback_data="rabic" 
+                        "🔙 ╎رجــــــوع", callback_data="rabic" 
                     ),  
                 ],
             ]
@@ -1058,12 +1058,12 @@ async def sthjbt(_, query: CallbackQuery):
             [
                 [        
                     InlineKeyboardButton(
-                        "⁨⌯ ٰ𝘿ٌِ𝙀ٓ𝙑 ٰ𝙆ٍ𝙔𝙊ٰ𝙂ٰٓٓ𝘼 ˹🕷️🔥˼⁩", url=f"https://t.me/J_G_A"
+                        "⁨⌯ ٰ𝘿ٌِ𝙀ٓ𝙑 ٰ𝘽𝘼𝙍𝙇𝙊 ˹✈🔥˼⁩", url=f"https://t.me/bar_lo0o0"
                     ),
                 ],
                 [                  
                     InlineKeyboardButton(
-                        "🔙︙back", callback_data="nglish" 
+                        "🔙╎back", callback_data="nglish" 
                     ),  
                 ],
             ]
@@ -1090,10 +1090,10 @@ async def xback(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
         [
         [
-            InlineKeyboardButton("🏴‍☠️︙اللغه العربية", callback_data="rabic"),
+            InlineKeyboardButton("🏴‍☠️╎اللغه العربية", callback_data="rabic"),
         ],
         [
-            InlineKeyboardButton("🇬🇧︙English language", callback_data="nglish"),
+            InlineKeyboardButton("🇬🇧╎English language", callback_data="nglish"),
         ],
         ]
    ),

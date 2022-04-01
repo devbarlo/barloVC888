@@ -42,10 +42,10 @@ def start_pannel():
             InlineKeyboardButton(text="قـنـاة السورس╎💡", url=f"https://t.me/{CHANNEL}"),
         ],
         [
-            InlineKeyboardButton("🚨╎الاوامـــر╎💁‍♂️", url="https://t.me/O_U_C/5291"),
+            InlineKeyboardButton("🚨╎الاوامـــر╎💁‍♂️", url="https://t.me/https://t.me/BARL0o0_HELP_SOURCE/2"),
         ],
         [
-            InlineKeyboardButton("⁨⌯ 𝙎َ𝙊ٰ𝙐ِِ𝖱ٰ𝘾ٌ𝙀 ٰ𝙆ٍ𝙔𝙊ٰ𝙂ٰٓٓ𝘼 ˹🕷️🔥˼⁩", url="https://t.me/O_U_C"),
+            InlineKeyboardButton("⁨⌯ 𝘉𝘈𝘙𝘓𝘖 • 𝘚𝘖𝘜𝘙𝘊𝘌 ˹🤺˼⁩", url="https://t.me/bar_lo0o0o"),
         ],
     ]
     return (
@@ -57,10 +57,10 @@ def start_pannel():
 pstart_markup = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("🏴‍☠️︙اللغه العربية", callback_data="rabic"),
+            InlineKeyboardButton("🏴‍☠️╎اللغه العربية", callback_data="rabic"),
         ],
         [
-           InlineKeyboardButton("🇬🇧︙English language", callback_data="nglish"),
+           InlineKeyboardButton("🇬🇧╎English language", callback_data="nglish"),
         ],
     ]
 )
@@ -115,10 +115,13 @@ async def start(_, message: Message):
     out = start_pannel()
     await message.reply_text(
         f"""
-شكرا لتضمينني في {message.chat.title}.
-الموسيقى حية.
+**شكرا لأضافتي في** {message.chat.title}.
 
-للمساعدة الرجاء الضغط على الزر أدناه.
+🤖╎**مرحبا عزيزي التحيه إليك ثم بعد انا هنا لأقوم بمساعدتك**
+
+📽╎**الموسيقي والفيديو تعمل بشكل جيد**
+
+👇╎**لمساعدتك بشكل أفضل قم بالنقر علي الازرار بالأسفل**
 """,
         reply_markup=InlineKeyboardMarkup(out[1]),
         disable_web_page_preview=True
