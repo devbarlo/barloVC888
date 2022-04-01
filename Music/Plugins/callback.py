@@ -1032,7 +1032,7 @@ async def rabic(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("vhkcbt"))
 async def vhkcbt(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""[👌]({BOT_IMG}) هلا ومرحبا بك هنا يمكن لك التواصل مع المبرمج ومن هنا يمكن لك استخراج اشياء التنصيب""",
+        f"""[💛╎]({BOT_IMG}) أهـلا بيـك يـ بـرو فـي  قـسـم { المـبرمـج } يمـكنـك الـتواصـل مـع مـطـور السـورس مـن خـلال الضـغـط بالأسـفـل""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [        
@@ -1053,7 +1053,7 @@ async def vhkcbt(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("sthjbt"))
 async def sthjbt(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""[👌]({BOT_IMG}) Hala and welcome here you can communicate with the programmer and from here you can extract the things of the inauguration""",
+        f"""[💛╎]({BOT_IMG}) Hala and welcome here you can communicate with the programmer and from here you can extract the things of the inauguration""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [        
