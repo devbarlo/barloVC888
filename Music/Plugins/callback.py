@@ -968,7 +968,7 @@ async def delplcb(_,CallbackQuery):
 async def nglish(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""
-**[📣]({BOT_IMG}) Hello! Ready Use Me?
+**[🗣]({BOT_IMG}) Hello! Ready Use Me?
 
 🔖  Is A Bot That Can Be Used To Listen To Songs In Voice Chat And Can Play Videos In Voice Chat!
 
@@ -979,17 +979,17 @@ async def nglish(_, query: CallbackQuery):
         [
         [
             InlineKeyboardButton(
-                "⚜ • Add Me To Your Group • ⚜", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                "⚔️Add Me To Your Group⚔️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
         ],
         [
-            InlineKeyboardButton("🔭╎support group", url=f"https://t.me/{GROUP}"),
-            InlineKeyboardButton("📡╎Source channel", url=f"https://t.me/{CHANNEL}"),
+            InlineKeyboardButton("🔭︙support group", url=f"https://t.me/{GROUP}"),
+            InlineKeyboardButton("📡︙Source channel", url=f"https://t.me/{CHANNEL}"),
         ],
         [
-           InlineKeyboardButton("🏴‍☠️╎programmer", callback_data="sthjbt"),
+           InlineKeyboardButton("🏴‍☠️︙programmer", callback_data="sthjbt"),
         ],
         [
-           InlineKeyboardButton("🔙╎back", callback_data="xback"),
+           InlineKeyboardButton("🔙︙back", callback_data="xback"),
         ],
         ]
    ),
@@ -999,7 +999,7 @@ async def nglish(_, query: CallbackQuery):
 async def rabic(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""
-**[📣]({BOT_IMG}) مرحبا بك! جاهز استخدمني?
+**[🗣]({BOT_IMG}) مرحبا بك! جاهز استخدمني?
 
 🔖 انا بوت يمكن استخدامه للاستماع إلى الأغاني في الدردشة الصوتية ويمكن تشغيل مقاطع الفيديو في الدردشة الصوتية!
 
@@ -1010,20 +1010,20 @@ async def rabic(_, query: CallbackQuery):
         [
         [
             InlineKeyboardButton(
-                "⚜ • أضف البوت إلي مجموعتك • ⚜", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                "⚔️اضاف البوت الى مجموعتك⚔️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
         ],
         [
-            InlineKeyboardButton("جـروب الـدعـم╎🧤​", url=f"https://t.me/{GROUP}"),
-            InlineKeyboardButton("قـنـاة السورس╎💡", url=f"https://t.me/{CHANNEL}"),
+            InlineKeyboardButton("🔭︙جروب الدعم", url=f"https://t.me/{GROUP}"),
+            InlineKeyboardButton("📡︙قناه السورس", url=f"https://t.me/{CHANNEL}"),
         ],
         [
-            InlineKeyboardButton("🚨╎الاوامـــر╎💁‍♂️", url="https://t.me/BARL0o0_HELP_SOURCE/2"),
+            InlineKeyboardButton("🎟︙الاوامر", url="https://t.me/O_U_C/5291"),
         ],
         [
-           InlineKeyboardButton("👮‍♂️╎مطور السورس", callback_data="vhkcbt"),
+           InlineKeyboardButton("🏴‍☠️︙المبرمج", callback_data="vhkcbt"),
         ],
         [
-           InlineKeyboardButton("🔙╎رجــــــوع", callback_data="xback"),
+           InlineKeyboardButton("🔙︙رجــــــوع", callback_data="xback"),
         ],
         ]
    ),
@@ -1037,12 +1037,12 @@ async def vhkcbt(_, query: CallbackQuery):
             [
                 [        
                     InlineKeyboardButton(
-                        "• ⇡ ᗪEᐯ 🎙 ᗷᗩᖇᒪO ⇡ •", url=f"https://t.me/bar_lo0o0"
+                        "⁨⌯ ٰ𝘿ٌِ𝙀ٓ𝙑 ٰ𝙆ٍ𝙔𝙊ٰ𝙂ٰٓٓ𝘼 ˹🕷️🔥˼⁩", url=f"https://t.me/J_G_A"
                     ),
                 ],
                 [                  
                     InlineKeyboardButton(
-                        "🔙 ╎رجــــــوع", callback_data="rabic" 
+                        "🔙 ︙رجــــــوع", callback_data="rabic" 
                     ),  
                 ],
             ]
@@ -1058,12 +1058,12 @@ async def sthjbt(_, query: CallbackQuery):
             [
                 [        
                     InlineKeyboardButton(
-                        "• ⇡ ᗪEᐯ 🎙 ᗷᗩᖇᒪO ⇡ •", url=f"https://t.me/bar_lo0o0"
+                        "⁨⌯ ٰ𝘿ٌِ𝙀ٓ𝙑 ٰ𝙆ٍ𝙔𝙊ٰ𝙂ٰٓٓ𝘼 ˹🕷️🔥˼⁩", url=f"https://t.me/J_G_A"
                     ),
                 ],
                 [                  
                     InlineKeyboardButton(
-                        "🔙╎back", callback_data="nglish" 
+                        "🔙︙back", callback_data="nglish" 
                     ),  
                 ],
             ]
@@ -1074,27 +1074,26 @@ async def sthjbt(_, query: CallbackQuery):
 async def xback(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""
-**[📣]({BOT_IMG}) مرحبا بك ! جاهز لى استخدامي?
-**نــورت يا╎{rpk}♡
+**[🗣]({BOT_IMG}) مرحبا ! جاهز لى استخدامي?
 
-🤖 [{BOT_NAME}](tg://user?id=2129034376) انـا بـوت لـتـشـغـيل الـمـوسـيـقـي والفيديو فـي الـدردشـات الـصـوتـيـه╎🍿,
+🔖 انا روبوت يمكن استخدامه للاستماع إلى الأغاني في الدردشة الصوتية ويمكنه تشغيل مقاطع الفيديو في الدردشة الصوتية!
 
-🤖╎ يمكنك تحويل اللغات من الازرار في الاسفل**
+🤖 ويمكن لك تحديد اللغة من الازرار في الاسفل**
 
-**📣╎Hello ! Ready Use Me?
+**🗣 Hello ! Ready Use Me?
 
-🔻╎Is A Bot That Can Be Used To Listen To Songs In Voice Chat And Can Play Videos In Voice Chat!
+🔖 Is A Bot That Can Be Used To Listen To Songs In Voice Chat And Can Play Videos In Voice Chat!
 
-🤖╎And you can select the language from the buttons below**
+🤖 And you can select the language from the buttons below**
 
 """,
         reply_markup=InlineKeyboardMarkup(
         [
         [
-            InlineKeyboardButton("🇪🇬 | اللغه العربية", callback_data="rabic"),
+            InlineKeyboardButton("🏴‍☠️︙اللغه العربية", callback_data="rabic"),
         ],
         [
-            InlineKeyboardButton("🇬🇧 | English", callback_data="nglish"),
+            InlineKeyboardButton("🇬🇧︙English language", callback_data="nglish"),
         ],
         ]
    ),

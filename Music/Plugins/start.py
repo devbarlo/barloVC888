@@ -42,10 +42,10 @@ def start_pannel():
             InlineKeyboardButton(text="قـنـاة السورس╎💡", url=f"https://t.me/{CHANNEL}"),
         ],
         [
-            InlineKeyboardButton("🚨╎الاوامـــر╎💁‍♂️", url="https://t.me/BARL0o0_HELP_SOURCE/2"),
+            InlineKeyboardButton("🚨╎الاوامـــر╎💁‍♂️", url="https://t.me/O_U_C/5291"),
         ],
         [
-            InlineKeyboardButton("👮‍♂️╎مطور السورس", url="https://t.me/bar_lo0o0"),
+            InlineKeyboardButton("⁨⌯ 𝙎َ𝙊ٰ𝙐ِِ𝖱ٰ𝘾ٌ𝙀 ٰ𝙆ٍ𝙔𝙊ٰ𝙂ٰٓٓ𝘼 ˹🕷️🔥˼⁩", url="https://t.me/O_U_C"),
         ],
     ]
     return (
@@ -57,10 +57,10 @@ def start_pannel():
 pstart_markup = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("🇪🇬 | اللغه العربية", callback_data="rabic"),
+            InlineKeyboardButton("🏴‍☠️︙اللغه العربية", callback_data="rabic"),
         ],
         [
-           InlineKeyboardButton("🇬🇧 | English", callback_data="nglish"),
+           InlineKeyboardButton("🇬🇧︙English language", callback_data="nglish"),
         ],
     ]
 )
@@ -115,13 +115,10 @@ async def start(_, message: Message):
     out = start_pannel()
     await message.reply_text(
         f"""
-**شكرا لأضافتي في** {message.chat.title}.
+شكرا لتضمينني في {message.chat.title}.
+الموسيقى حية.
 
-🤖╎**مرحبا عزيزي التحيه إليك ثم بعد انا هنا لأقوم بمساعدتك**
-
-📽╎**الموسيقي والفيديو تعمل بشكل جيد**
-
-👇╎**لمساعدتك بشكل أفضل قم بالنقر علي الازرار بالأسفل**
+للمساعدة الرجاء الضغط على الزر أدناه.
 """,
         reply_markup=InlineKeyboardMarkup(out[1]),
         disable_web_page_preview=True
@@ -138,18 +135,17 @@ async def play(_, message: Message):
         await app.send_message(
             message.chat.id,
             text=f"""
-**[📣]({BOT_IMG}) مرحبا بك ! جاهز لى استخدامي?
-**نــورت يا╎{rpk}♡
+**[🗣]({BOT_IMG}) مرحبا بك ! جاهز لى استخدامي?
 
-🤖 [{BOT_NAME}](tg://user?id=2129034376) انـا بـوت لـتـشـغـيل الـمـوسـيـقـي والفيديو فـي الـدردشـات الـصـوتـيـه╎🍿,
+🔖  انا روبوت يمكن استخدامه للاستماع إلى الأغاني في الدردشة الصوتية ويمكنه تشغيل مقاطع الفيديو في الدردشة الصوتية!
 
-🤖╎ يمكنك تحويل اللغات من الازرار في الاسفل**
+🤖 ويمكن لك تحديد اللغة من الازرار في الاسفل**
 
-**📣╎Hello ! Ready Use Me?
+**🗣 Hello ! Ready Use Me?
 
-🔻╎Is A Bot That Can Be Used To Listen To Songs In Voice Chat And Can Play Videos In Voice Chat!
+🔖 Is A Bot That Can Be Used To Listen To Songs In Voice Chat And Can Play Videos In Voice Chat!
 
-🤖╎And you can select the language from the buttons below**
+🤖 And you can select the language from the buttons below**
 
 """,
             parse_mode="markdown",
