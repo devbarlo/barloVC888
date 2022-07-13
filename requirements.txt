@@ -1,5 +1,5 @@
 tgcrypto
-pyrogram==1.2.20
+pyrogram==1.4.16
 py-tgcalls
 pybase64
 youtube-search-python
